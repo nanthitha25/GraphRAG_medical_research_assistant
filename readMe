@@ -1,0 +1,602 @@
+# Advanced Self-Improving GraphRAG Medical Research Assistant
+
+## 1. Project Overview
+
+### Project Title
+
+Advanced Self-Improving GraphRAG Medical Research Assistant
+
+### Problem Statement
+
+Medical researchers and healthcare professionals face difficulties in:
+
+* Searching through large volumes of medical research papers
+* Connecting related medical concepts
+* Identifying reliable treatment pathways
+* Reducing misinformation and hallucinations from AI systems
+
+Traditional RAG systems retrieve semantically similar text but fail to reason over relationships between diseases, symptoms, drugs, and treatments.
+
+### Proposed Solution
+
+Build a production-grade AI medical research assistant using:
+
+* Retrieval-Augmented Generation (RAG)
+* GraphRAG
+* Hybrid Retrieval
+* Knowledge Graphs
+* Hallucination Detection
+* Confidence Scoring
+* Self-Improving Retrieval Pipelines
+
+The system combines:
+
+* Vector-based semantic search
+* Neo4j knowledge graph reasoning
+* Multi-LLM evaluation architecture
+
+---
+
+# 2. Objectives
+
+## Primary Objectives
+
+* Build an explainable medical AI assistant
+* Reduce hallucinations in medical responses
+* Enable graph-based medical reasoning
+* Provide source-grounded medical answers
+* Implement self-evaluating AI pipelines
+
+## Secondary Objectives
+
+* Visualize medical knowledge graphs
+* Provide confidence scoring
+* Build adaptive retrieval systems
+* Create scalable backend architecture
+
+---
+
+# 3. Core Technologies
+
+## Backend Technologies
+
+| Technology             | Purpose                   |
+| ---------------------- | ------------------------- |
+| Python                 | Backend programming       |
+| FastAPI                | API framework             |
+| ChromaDB               | Vector database           |
+| Neo4j                  | Graph database            |
+| OpenAI GPT-4o-mini     | Generator + Evaluator LLM |
+| Sentence Transformers  | Embeddings                |
+| LangChain / LlamaIndex | RAG orchestration         |
+
+## Frontend Technologies
+
+| Technology   | Purpose             |
+| ------------ | ------------------- |
+| Next.js      | Frontend framework  |
+| React        | UI development      |
+| Tailwind CSS | Styling             |
+| Axios        | API communication   |
+| React Flow   | Graph visualization |
+
+---
+
+# 4. System Architecture
+
+## High-Level Architecture
+
+```text
+Medical PDFs
+      ↓
+PDF Extraction
+      ↓
+Chunking
+      ↓
+Embeddings
+      ↓
+ChromaDB Vector Storage
+      ↓
+Entity Extraction
+      ↓
+Neo4j Knowledge Graph
+      ↓
+Hybrid Retrieval
+      ↓
+Reranking
+      ↓
+Context Building
+      ↓
+Generator LLM
+      ↓
+Evaluator LLM
+      ↓
+Confidence Scoring
+      ↓
+Final API Response
+```
+
+---
+
+# 5. Backend Architecture
+
+## Backend Folder Structure
+
+```text
+backend/
+│
+├── app/
+│   ├── api/
+│   ├── ingestion/
+│   ├── embeddings/
+│   ├── vectordb/
+│   ├── graph/
+│   ├── retrieval/
+│   ├── reranker/
+│   ├── llm/
+│   ├── evaluation/
+│   ├── feedback/
+│   ├── pipelines/
+│   ├── config/
+│   └── main.py
+│
+├── data/
+├── tests/
+├── requirements.txt
+└── Dockerfile
+```
+
+---
+
+# 6. Functional Modules
+
+## 6.1 PDF Ingestion Module
+
+### Purpose
+
+Extract text from uploaded medical research PDFs.
+
+### Components
+
+* pdf_loader.py
+* chunker.py
+
+### Workflow
+
+```text
+PDF → Extract Text → Split Into Chunks
+```
+
+---
+
+## 6.2 Embedding Module
+
+### Purpose
+
+Convert text chunks into semantic vector embeddings.
+
+### Model Used
+
+* all-MiniLM-L6-v2
+
+### Workflow
+
+```text
+Text Chunk → Embedding Vector
+```
+
+---
+
+## 6.3 Vector Database Module
+
+### Purpose
+
+Store semantic embeddings for similarity search.
+
+### Database
+
+* ChromaDB
+
+### Features
+
+* Semantic retrieval
+* Similarity search
+* Metadata storage
+
+---
+
+## 6.4 Knowledge Graph Module
+
+### Purpose
+
+Store relationships between medical entities.
+
+### Database
+
+* Neo4j
+
+### Entity Types
+
+* Disease
+* Drug
+* Symptom
+* Organ
+* Treatment
+
+### Relationship Types
+
+* CAUSES
+* TREATS
+* AFFECTS
+* ASSOCIATED_WITH
+
+### Example
+
+```text
+(Diabetes)-[:CAUSES]->(Kidney Disease)
+```
+
+---
+
+## 6.5 Hybrid Retrieval Module
+
+### Purpose
+
+Combine semantic retrieval and graph traversal.
+
+### Retrieval Types
+
+1. Vector Retrieval
+2. Graph Retrieval
+
+### Workflow
+
+```text
+Query
+ ↓
+Semantic Search
+ ↓
+Graph Traversal
+ ↓
+Merged Evidence
+```
+
+---
+
+## 6.6 Reranking Module
+
+### Purpose
+
+Improve retrieval quality by ranking the most relevant evidence.
+
+### Features
+
+* Remove noisy chunks
+* Prioritize strong evidence
+* Improve LLM grounding
+
+---
+
+## 6.7 Generator LLM Module
+
+### Purpose
+
+Generate grounded medical responses.
+
+### Model
+
+* GPT-4o-mini
+
+### Responsibilities
+
+* Medical reasoning
+* Evidence synthesis
+* Response generation
+
+---
+
+## 6.8 Evaluator LLM Module
+
+### Purpose
+
+Evaluate generated responses for hallucinations.
+
+### Model
+
+* GPT-4o-mini
+
+### Responsibilities
+
+* Detect unsupported claims
+* Evaluate evidence grounding
+* Compute hallucination score
+
+### Example Output
+
+```json
+{
+  "hallucination_score": 0.08,
+  "supported": true,
+  "reasoning": "Answer is grounded in evidence"
+}
+```
+
+---
+
+## 6.9 Confidence Scoring Module
+
+### Purpose
+
+Estimate reliability of generated answers.
+
+### Inputs
+
+* Hallucination score
+* Retrieval quality
+* Graph connectivity
+
+### Output
+
+```json
+{
+  "confidence": 0.91
+}
+```
+
+---
+
+## 6.10 Feedback Learning Module
+
+### Purpose
+
+Enable self-improving retrieval.
+
+### Features
+
+* Store user feedback
+* Track failed queries
+* Improve retrieval strategies
+* Adaptive graph traversal
+
+---
+
+# 7. Frontend Architecture
+
+## Frontend Features
+
+* AI Chat Interface
+* PDF Upload System
+* Graph Visualization
+* Source Citation Panel
+* Confidence Display
+* Streaming AI Responses
+
+## Frontend Workflow
+
+```text
+User Query
+    ↓
+Next.js Frontend
+    ↓
+FastAPI Backend
+    ↓
+GraphRAG Pipeline
+    ↓
+AI Response
+```
+
+---
+
+# 8. API Design
+
+## POST /query
+
+### Purpose
+
+Ask medical research questions.
+
+### Request
+
+```json
+{
+  "query": "How does diabetes affect kidneys?"
+}
+```
+
+### Response
+
+```json
+{
+  "answer": "...",
+  "confidence": 0.91,
+  "hallucination_score": 0.08,
+  "sources": [],
+  "graph_paths": []
+}
+```
+
+---
+
+## POST /upload
+
+### Purpose
+
+Upload medical PDFs.
+
+### Workflow
+
+```text
+Upload PDF
+ ↓
+Ingestion Pipeline
+ ↓
+Embedding Generation
+ ↓
+Graph Construction
+```
+
+---
+
+# 9. Database Design
+
+## ChromaDB Stores
+
+* Embeddings
+* Chunk text
+* Metadata
+
+## Neo4j Stores
+
+* Medical entities
+* Relationships
+* Graph properties
+
+---
+
+# 10. Two-LLM Architecture
+
+## Why Two LLMs?
+
+### Generator LLM
+
+Responsible for:
+
+* Answer generation
+* Medical reasoning
+* Evidence synthesis
+
+### Evaluator LLM
+
+Responsible for:
+
+* Hallucination detection
+* Evidence validation
+* Reliability scoring
+
+## Workflow
+
+```text
+Hybrid Retrieval
+      ↓
+Generator LLM
+      ↓
+Generated Answer
+      ↓
+Evaluator LLM
+      ↓
+Hallucination Detection
+      ↓
+Confidence Score
+```
+
+---
+
+# 11. Self-Improving Retrieval
+
+## Adaptive Retrieval Strategies
+
+* Increase retrieval count
+* Expand graph traversal depth
+* Query rewriting
+* Retrieval retries
+
+## Example
+
+If hallucination score is high:
+
+```text
+Retrieve More Evidence
+→ Expand Graph Search
+→ Regenerate Answer
+```
+
+---
+
+# 12. Explainable AI Features
+
+## Features
+
+* Source citations
+* Graph reasoning paths
+* Confidence scores
+* Hallucination transparency
+
+## Example Reasoning Path
+
+```text
+Diabetes
+ → causes
+Kidney Disease
+ → treated_by
+ACE Inhibitors
+```
+
+---
+
+# 13. Security Considerations
+
+## Security Features
+
+* Environment variable management
+* API key protection
+* Input validation
+* Exception handling
+* Backend-only AI logic
+
+---
+
+# 14. Future Enhancements
+
+## Planned Improvements
+
+* Multi-agent workflows
+* Biomedical NER models
+* Advanced rerankers
+* Real-time monitoring
+* LangSmith observability
+* Multi-modal document understanding
+
+---
+
+# 15. Expected Outcomes
+
+## Final System Capabilities
+
+* Explainable medical AI
+* Graph-based reasoning
+* Reduced hallucinations
+* Confidence-aware responses
+* Self-improving retrieval
+* Hybrid semantic + graph reasoning
+
+---
+
+# 16. Conclusion
+
+The Advanced Self-Improving GraphRAG Medical Research Assistant combines:
+
+* semantic retrieval
+* graph reasoning
+* multi-LLM evaluation
+* adaptive retrieval
+* explainable AI
+
+into a production-grade medical AI research system.
+
+The project demonstrates advanced concepts in:
+
+* AI Engineering
+* GraphRAG
+* Knowledge Graphs
+* LLM Orchestration
+* Retrieval-Augmented Generation
+* AI Evaluation Systems
+* Full Stack AI Development
+
+This project is suitable for:
+
+* AI engineering portfolios
+* research demonstrations
+* production AI architecture showcases
+* healthcare AI applications
+* advanced interview discussions
