@@ -1,43 +1,66 @@
-from dataclasses import dataclass
-from typing import Optional
+import logging
+from typing import Dict, Any
 
-@dataclass  
-class AdaptiveConfig:
-    semantic_top_k: int = 5
-    rerank_top_k: int = 3
-    graph_depth: int = 2
-    expanded: bool = False
-    expansion_reason: str = ""
+from app.llm.client import client
+
+try:
+    from app.utils.logger import get_logger
+    logger = get_logger(__name__)
+except ImportError:
+    logger = logging.getLogger(__name__)
+
+
+def expand_query(query: str) -> str:
+    """
+    Strategy 3: Query Expansion.
+    Uses a fast LLM call to append medical synonyms and broader context.
+    """
+    prompt = f"""
+    You are a medical search expert.
+    Rewrite the following query to include medical synonyms, related clinical terms, and broader disease categories to improve vector search retrieval.
+    Do NOT answer the query. Only return the expanded search string.
+
+    Original Query: {query}
+    """
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3
+        )
+        expanded = response.choices[0].message.content.strip()
+        logger.info(f"[AdaptiveRetrieval] Query Expanded: '{query}' -> '{expanded}'")
+        return expanded
+    except Exception as e:
+        logger.warning(f"[AdaptiveRetrieval] Query expansion failed: {e}")
+        return query
+
 
 class AdaptiveRetriever:
-    def __init__(self, feedback_store, min_confidence: float = 0.5):
-        self.feedback_store = feedback_store
-        self.min_confidence = min_confidence
+    """
+    Intercepts failed retrievals (high hallucination score) and applies
+    dynamic strategies to improve evidence gathering.
+    """
     
-    def get_adaptive_config(self, query: str, previous_confidence: Optional[float] = None) -> AdaptiveConfig:
-        config = AdaptiveConfig()
+    def __init__(self, retrieval_pipeline):
+        self.retrieval_pipeline = retrieval_pipeline
+
+    def retrieve_with_strategies(self, query: str) -> Dict[str, Any]:
+        """
+        Strategy 1 & 2: Increase Retrieval Count & Graph Depth
+        """
+        logger.info("[AdaptiveRetrieval] Triggering adaptive strategies (Increased depth, expanded query)")
         
-        if previous_confidence is not None and previous_confidence < self.min_confidence:
-            config.semantic_top_k = 10
-            config.rerank_top_k = 5
-            config.graph_depth = 3
-            config.expanded = True
-            config.expansion_reason = f"Low confidence ({previous_confidence:.2f}) — expanded retrieval depth"
+        # Strategy 3: Query Expansion
+        expanded_query = expand_query(query)
+
+        # Execute retrieval with aggressively scaled parameters
+        # (Assuming the retrieval_pipeline accepts these kwargs or we just hardcode the bump)
+        retrieval_data = self.retrieval_pipeline.execute(
+            expanded_query,
+            top_k_semantic=10,  # Strategy 1: Increase Count (was 5)
+            top_k_rerank=5,     # Increased rerank count
+            graph_depth=3       # Strategy 2: Expand graph depth (was 2)
+        )
         
-        try:
-            past_low = self.feedback_store.get_low_confidence_queries(threshold=self.min_confidence)
-            query_words = set(query.lower().split())
-            for past in past_low[:5]:
-                past_words = set(past.get('query', '').lower().split())
-                overlap = len(query_words & past_words) / max(len(query_words), 1)
-                if overlap > 0.5 and not config.expanded:
-                    config.semantic_top_k = 8
-                    config.rerank_top_k = 4
-                    config.graph_depth = 3
-                    config.expanded = True
-                    config.expansion_reason = "Similar past query had low confidence — pre-emptively expanded"
-                    break
-        except Exception:
-            pass
-        
-        return config
+        return retrieval_data

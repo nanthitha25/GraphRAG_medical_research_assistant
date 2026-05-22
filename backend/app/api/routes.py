@@ -56,7 +56,11 @@ except Exception as e:
     feedback_store = None
 
 try:
-    rag_pipeline = RagPipeline()
+    rag_pipeline = RagPipeline(
+        store=chroma_store, 
+        neo4j_store=neo4j_store, 
+        extractor=entity_extractor
+    )
 except Exception as e:
     logger.error(f"Failed to initialize RagPipeline: {e}")
     rag_pipeline = None
@@ -87,12 +91,11 @@ async def query(request: QueryRequest):
         return QueryResponse(
             answer=result.get("answer", ""),
             confidence=result.get("confidence", 0.0),
-            confidence_explanation=result.get("confidence_explanation", ""),
+            hallucination_score=result.get("hallucination_score", 0.0),
+            supported=result.get("supported", True),
             sources=result.get("sources", []),
             graph_paths=result.get("graph_paths", []),
-            interaction_id=result.get("interaction_id"),
-            adapted=result.get("adapted", False),
-            adaptation_reason=result.get("adaptation_reason", "")
+            retrieval_stats=result.get("retrieval_stats", {})
         )
     except Exception as e:
         logger.error(f"Error executing query: {e}")

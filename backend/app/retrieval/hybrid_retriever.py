@@ -21,7 +21,7 @@ class HybridRetriever:
         self.semantic_retriever = semantic_retriever
         self.graph_retriever = graph_retriever
 
-    def retrieve(self, query: str, top_k: int = 5) -> dict:
+    def retrieve(self, query: str, top_k: int = 5, graph_depth: int = 2) -> dict:
         """
         Returns a dictionary containing both vector similarity results
         and graph traversal results.
@@ -29,6 +29,7 @@ class HybridRetriever:
         Args:
             query: User's medical research query
             top_k: Number of semantic chunks to retrieve
+            graph_depth: Depth of graph traversal
 
         Returns:
             dict with keys: vector_context (list[str]), graph_context (list[str])

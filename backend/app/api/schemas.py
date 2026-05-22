@@ -9,12 +9,11 @@ class QueryRequest(BaseModel):
 class QueryResponse(BaseModel):
     answer: str
     confidence: float
-    confidence_explanation: str = ""
-    sources: List[str]
+    hallucination_score: float
+    supported: bool
+    sources: List[dict]
     graph_paths: List[str]
-    interaction_id: Optional[int] = None  # for feedback linkage
-    adapted: bool = False  # whether adaptive retrieval was triggered
-    adaptation_reason: str = ""
+    retrieval_stats: dict
 
 class UploadResponse(BaseModel):
     filename: str

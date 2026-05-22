@@ -42,6 +42,7 @@ services:
       - FEEDBACK_DB_PATH=data/feedback.db
       - LOG_LEVEL=INFO
     volumes:
+      - ./backend/app:/app/app
       - ./backend/data:/app/data
       - ./backend/logs:/app/logs
     depends_on:

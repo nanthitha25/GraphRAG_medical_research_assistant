@@ -32,7 +32,8 @@ class RetrievalPipeline:
         self,
         query: str,
         top_k_semantic: int = 5,
-        top_k_rerank: int = 2
+        top_k_rerank: int = 2,
+        graph_depth: int = 2
     ) -> dict:
         """
         Execute the full retrieval pipeline.
@@ -41,18 +42,19 @@ class RetrievalPipeline:
             query: User's medical research query
             top_k_semantic: Number of semantic chunks to retrieve initially
             top_k_rerank: Number of top chunks to keep after reranking
+            graph_depth: Depth of graph traversal
 
         Returns:
             dict with: vector_results, graph_results, combined_context
         """
         logger.info(
             f"[RetrievalPipeline] Starting — query='{query[:60]}', "
-            f"top_k_semantic={top_k_semantic}, top_k_rerank={top_k_rerank}"
+            f"top_k_semantic={top_k_semantic}, top_k_rerank={top_k_rerank}, graph_depth={graph_depth}"
         )
 
         # ── Step 1: Hybrid Retrieval (Vector + Graph) ──────────────────────
         t0 = time.time()
-        results = self.hybrid_retriever.retrieve(query, top_k=top_k_semantic)
+        results = self.hybrid_retriever.retrieve(query, top_k=top_k_semantic, graph_depth=graph_depth)
         hybrid_latency = time.time() - t0
         logger.info(
             f"[HybridRetriever] Done in {hybrid_latency:.3f}s — "

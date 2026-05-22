@@ -11,3 +11,392 @@
 {"timestamp": "2026-05-22T18:44:02.060016+00:00", "level": "INFO", "module": "app.main", "message": "All pipeline components initialized"}
 {"timestamp": "2026-05-22T18:44:04.946334+00:00", "level": "INFO", "module": "app.main", "message": "GET /docs — 200 — 0.001s"}
 {"timestamp": "2026-05-22T18:44:05.234951+00:00", "level": "INFO", "module": "app.main", "message": "GET /openapi.json — 200 — 0.024s"}
+{"timestamp": "2026-05-22T19:34:01.166588+00:00", "level": "INFO", "module": "app.main", "message": "OPTIONS /api/v1/query — 200 — 0.023s"}
+{"timestamp": "2026-05-22T19:34:01.334787+00:00", "level": "INFO", "module": "app.main", "message": "POST /api/v1/query — 500 — 0.086s"}
+{"timestamp": "2026-05-22T19:36:01.799971+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T19:36:03.031795+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "Initialising ChromaStore at 'data/chroma' with collection 'medical_research'."}
+{"timestamp": "2026-05-22T19:36:03.416112+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "ChromaStore ready — collection 'medical_research' contains 0 document(s)."}
+{"timestamp": "2026-05-22T19:36:03.419411+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Driver created — URI: bolt://neo4j:7687, user: neo4j"}
+{"timestamp": "2026-05-22T19:36:03.444774+00:00", "level": "INFO", "module": "app.feedback.feedback_store", "message": "[FeedbackStore] Initialised at data/feedback.db"}
+{"timestamp": "2026-05-22T19:36:03.446492+00:00", "level": "ERROR", "module": "app.api.routes", "message": "Failed to initialize RagPipeline: RagPipeline.__init__() missing 3 required positional arguments: 'store', 'neo4j_store', and 'extractor'"}
+{"timestamp": "2026-05-22T19:36:03.446922+00:00", "level": "INFO", "module": "app.pipelines.ingestion_pipeline", "message": "[IngestionPipeline] Initialised"}
+{"timestamp": "2026-05-22T19:36:03.902833+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant starting up..."}
+{"timestamp": "2026-05-22T19:36:03.909771+00:00", "level": "INFO", "module": "app.main", "message": "All pipeline components initialized"}
+{"timestamp": "2026-05-22T19:36:08.394929+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:36:08.406047+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.086s"}
+{"timestamp": "2026-05-22T19:36:29.181967+00:00", "level": "INFO", "module": "app.main", "message": "GET / — 200 — 0.077s"}
+{"timestamp": "2026-05-22T19:36:38.629153+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:36:38.643831+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.054s"}
+{"timestamp": "2026-05-22T19:36:54.357519+00:00", "level": "INFO", "module": "app.main", "message": "POST /api/v1/query — 500 — 0.021s"}
+{"timestamp": "2026-05-22T19:37:08.959569+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:37:08.975706+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.057s"}
+{"timestamp": "2026-05-22T19:37:39.136208+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:37:39.151313+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.033s"}
+{"timestamp": "2026-05-22T19:38:09.243078+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:38:09.249518+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.015s"}
+{"timestamp": "2026-05-22T19:38:39.322684+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:38:39.325343+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T19:39:09.382666+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:39:09.384152+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T19:39:39.444448+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:39:39.447797+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.009s"}
+{"timestamp": "2026-05-22T19:40:09.518114+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:40:09.520047+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.008s"}
+{"timestamp": "2026-05-22T19:40:39.589083+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:40:39.590811+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T19:41:09.685371+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:41:09.689995+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T19:41:39.750932+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:41:39.753233+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T19:42:09.855590+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:42:09.867002+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.038s"}
+{"timestamp": "2026-05-22T19:42:39.927189+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:42:39.929537+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T19:43:10.019444+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:43:10.024644+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.016s"}
+{"timestamp": "2026-05-22T19:43:40.093001+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:43:40.094764+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T19:44:10.202801+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:44:10.208260+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.023s"}
+{"timestamp": "2026-05-22T19:44:40.341927+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:44:40.355662+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.032s"}
+{"timestamp": "2026-05-22T19:45:10.454001+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:45:10.458931+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.014s"}
+{"timestamp": "2026-05-22T19:45:40.521373+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:45:40.524591+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.006s"}
+{"timestamp": "2026-05-22T19:46:10.615652+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:46:10.621668+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T19:46:40.687054+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:46:40.689720+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T19:47:10.807134+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:47:10.815130+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.028s"}
+{"timestamp": "2026-05-22T19:47:40.908594+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:47:40.916353+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.027s"}
+{"timestamp": "2026-05-22T19:48:11.013261+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:48:11.018992+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T19:48:41.089161+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:48:41.091017+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T19:49:11.175691+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:49:11.178139+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T19:49:41.242801+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:49:41.244589+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T19:50:11.348724+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:50:11.354898+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.023s"}
+{"timestamp": "2026-05-22T19:50:41.412300+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:50:41.414956+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T19:51:11.504801+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:51:11.508507+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.012s"}
+{"timestamp": "2026-05-22T19:51:41.582938+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:51:41.584864+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T19:52:11.648670+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:52:11.650786+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T19:52:41.734254+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:52:41.738969+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.011s"}
+{"timestamp": "2026-05-22T19:53:11.808167+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:53:11.810531+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T19:53:43.130793+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:53:43.132658+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 1.262s"}
+{"timestamp": "2026-05-22T19:54:13.224267+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:54:13.229387+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.016s"}
+{"timestamp": "2026-05-22T19:54:43.289382+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:54:43.291536+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T19:55:13.371898+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:55:13.374387+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T19:55:43.452456+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:55:43.456646+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.010s"}
+{"timestamp": "2026-05-22T19:56:13.529247+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:56:13.533143+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.013s"}
+{"timestamp": "2026-05-22T19:56:43.605997+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:56:43.607903+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T19:57:13.697184+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:57:13.723030+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.039s"}
+{"timestamp": "2026-05-22T19:57:43.781054+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:57:43.782641+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T19:58:13.876182+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:58:13.883383+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.019s"}
+{"timestamp": "2026-05-22T19:58:43.959372+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:58:43.961436+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T19:59:14.069038+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:59:14.075135+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.025s"}
+{"timestamp": "2026-05-22T19:59:35.027533+00:00", "level": "INFO", "module": "app.llm.generator", "message": "[MedicalLLMPipeline] Processing query: 'What treats Diabetic Neuropathy?'"}
+{"timestamp": "2026-05-22T19:59:35.770070+00:00", "level": "ERROR", "module": "app.llm.generator", "message": "[MedicalLLMPipeline] Generator failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}", "exc_info": "Traceback (most recent call last):\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/app/llm/generator.py\", line 63, in generate_and_evaluate\n    gen_response = await self.generator.ainvoke([sys_msg, usr_msg])\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/langchain_core/language_models/chat_models.py\", line 497, in ainvoke\n    llm_result = await self.agenerate_prompt(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<8 lines>...\n    )\n    ^\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/langchain_core/language_models/chat_models.py\", line 1834, in agenerate_prompt\n    return await self.agenerate(\n           ^^^^^^^^^^^^^^^^^^^^^\n        prompt_messages, stop=stop, callbacks=callbacks, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/langchain_core/language_models/chat_models.py\", line 1792, in agenerate\n    raise exceptions[0]\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/langchain_core/language_models/chat_models.py\", line 2127, in _agenerate_with_cache\n    result = await self._agenerate(\n             ^^^^^^^^^^^^^^^^^^^^^^\n        messages, stop=stop, run_manager=run_manager, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/langchain_openai/chat_models/base.py\", line 1937, in _agenerate\n    _handle_openai_api_error(e)\n    ~~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/langchain_openai/chat_models/base.py\", line 1930, in _agenerate\n    raw_response = await self.async_client.with_raw_response.create(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        **payload\n        ^^^^^^^^^\n    )\n    ^\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/openai/_legacy_response.py\", line 384, in wrapped\n    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py\", line 2739, in create\n    return await self._post(\n           ^^^^^^^^^^^^^^^^^\n    ...<53 lines>...\n    )\n    ^\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/openai/_base_client.py\", line 1931, in post\n    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/nanthithavenkatachapathy/Desktop/GraphRAG medical research assistant/backend/venv/lib/python3.14/site-packages/openai/_base_client.py\", line 1716, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"}
+{"timestamp": "2026-05-22T19:59:44.170484+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T19:59:44.174079+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.011s"}
+{"timestamp": "2026-05-22T20:00:14.257820+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:00:14.263529+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T20:00:44.372903+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:00:44.379718+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.026s"}
+{"timestamp": "2026-05-22T20:01:14.482113+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:01:14.486760+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.013s"}
+{"timestamp": "2026-05-22T20:01:44.549551+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:01:44.551139+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.007s"}
+{"timestamp": "2026-05-22T20:02:14.652833+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:02:14.659317+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.019s"}
+{"timestamp": "2026-05-22T20:02:44.746110+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:02:44.748821+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.006s"}
+{"timestamp": "2026-05-22T20:03:14.899669+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:03:14.906564+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.024s"}
+{"timestamp": "2026-05-22T20:03:45.016283+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:03:45.022252+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T20:04:15.123961+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:04:15.135391+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.024s"}
+{"timestamp": "2026-05-22T20:04:45.196296+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:04:45.199189+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.006s"}
+{"timestamp": "2026-05-22T20:05:15.313533+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:05:15.319185+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.016s"}
+{"timestamp": "2026-05-22T20:05:45.394775+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:05:45.396714+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T20:06:15.474719+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:06:15.476409+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.015s"}
+{"timestamp": "2026-05-22T20:06:45.545099+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:06:45.546581+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.007s"}
+{"timestamp": "2026-05-22T20:07:15.637246+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:07:15.642118+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T20:07:45.711909+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:07:45.713929+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T20:08:15.795450+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:08:15.799774+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.011s"}
+{"timestamp": "2026-05-22T20:08:45.865003+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:08:45.866605+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.007s"}
+{"timestamp": "2026-05-22T20:09:15.955187+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:09:15.960747+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.025s"}
+{"timestamp": "2026-05-22T20:09:46.031622+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:09:46.034416+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T20:10:16.125919+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:10:16.130403+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.014s"}
+{"timestamp": "2026-05-22T20:10:46.202676+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:10:46.206022+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.008s"}
+{"timestamp": "2026-05-22T20:11:16.313256+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:11:16.319801+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.024s"}
+{"timestamp": "2026-05-22T20:11:46.388809+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:11:46.391502+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T20:12:16.481847+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:12:16.487855+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T20:12:46.551027+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:12:46.553751+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T20:13:16.616401+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:13:16.618394+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T20:13:40.529162+00:00", "level": "INFO", "module": "app.main", "message": "OPTIONS /api/v1/query — 200 — 0.002s"}
+{"timestamp": "2026-05-22T20:13:40.563254+00:00", "level": "INFO", "module": "app.main", "message": "POST /api/v1/query — 500 — 0.016s"}
+{"timestamp": "2026-05-22T20:13:46.706952+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:13:46.710187+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.012s"}
+{"timestamp": "2026-05-22T20:14:16.789006+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:14:16.793236+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T20:14:46.946768+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:14:46.954919+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.027s"}
+{"timestamp": "2026-05-22T20:15:17.153433+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:15:17.159203+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.020s"}
+{"timestamp": "2026-05-22T20:15:47.236650+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:15:47.240523+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.011s"}
+{"timestamp": "2026-05-22T20:15:49.453335+00:00", "level": "INFO", "module": "app.main", "message": "POST /api/v1/query — 500 — 0.004s"}
+{"timestamp": "2026-05-22T20:16:17.336816+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:16:17.347013+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.022s"}
+{"timestamp": "2026-05-22T20:16:47.447666+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:16:47.454394+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.018s"}
+{"timestamp": "2026-05-22T20:17:17.626473+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:17:17.634045+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.022s"}
+{"timestamp": "2026-05-22T20:17:47.732749+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:17:47.738919+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T20:17:48.769268+00:00", "level": "INFO", "module": "app.main", "message": "POST /api/v1/query — 500 — 0.008s"}
+{"timestamp": "2026-05-22T20:18:10.324021+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant shutting down..."}
+{"timestamp": "2026-05-22T20:18:25.223176+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:18:25.400640+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "Initialising ChromaStore at 'data/chroma' with collection 'medical_research'."}
+{"timestamp": "2026-05-22T20:18:25.486138+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "ChromaStore ready — collection 'medical_research' contains 0 document(s)."}
+{"timestamp": "2026-05-22T20:18:25.487439+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Driver created — URI: bolt://neo4j:7687, user: neo4j"}
+{"timestamp": "2026-05-22T20:18:25.496206+00:00", "level": "INFO", "module": "app.feedback.feedback_store", "message": "[FeedbackStore] Initialised at data/feedback.db"}
+{"timestamp": "2026-05-22T20:18:25.496732+00:00", "level": "ERROR", "module": "app.api.routes", "message": "Failed to initialize RagPipeline: RagPipeline.__init__() missing 3 required positional arguments: 'store', 'neo4j_store', and 'extractor'"}
+{"timestamp": "2026-05-22T20:18:25.496997+00:00", "level": "INFO", "module": "app.pipelines.ingestion_pipeline", "message": "[IngestionPipeline] Initialised"}
+{"timestamp": "2026-05-22T20:18:25.538132+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant starting up..."}
+{"timestamp": "2026-05-22T20:18:25.538437+00:00", "level": "INFO", "module": "app.main", "message": "All pipeline components initialized"}
+{"timestamp": "2026-05-22T20:18:32.253873+00:00", "level": "INFO", "module": "app.main", "message": "POST /api/v1/query — 500 — 0.004s"}
+{"timestamp": "2026-05-22T20:18:42.417437+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:18:42.421511+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.017s"}
+{"timestamp": "2026-05-22T20:19:12.518606+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:19:12.523343+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.016s"}
+{"timestamp": "2026-05-22T20:19:42.612149+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:19:42.616158+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.016s"}
+{"timestamp": "2026-05-22T20:20:12.706456+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:20:12.711291+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.014s"}
+{"timestamp": "2026-05-22T20:20:37.639849+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant shutting down..."}
+{"timestamp": "2026-05-22T20:21:08.094752+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:21:23.410828+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:21:38.149008+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:22:18.030819+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:22:33.822730+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:22:48.541802+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:23:01.754274+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:23:14.351660+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:23:28.111197+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:23:40.893025+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:23:55.863717+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:24:12.173516+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:24:33.281662+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:24:50.268548+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:25:06.232450+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:25:21.511391+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:25:53.143202+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:25:53.657034+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "Initialising ChromaStore at 'data/chroma' with collection 'medical_research'."}
+{"timestamp": "2026-05-22T20:25:53.779104+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "ChromaStore ready — collection 'medical_research' contains 0 document(s)."}
+{"timestamp": "2026-05-22T20:25:53.783328+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Driver created — URI: bolt://neo4j:7687, user: neo4j"}
+{"timestamp": "2026-05-22T20:26:17.972366+00:00", "level": "INFO", "module": "app.reranker.reranker", "message": "[Reranker] CrossEncoder 'cross-encoder/ms-marco-MiniLM-L-6-v2' loaded successfully"}
+{"timestamp": "2026-05-22T20:26:17.974909+00:00", "level": "INFO", "module": "app.pipelines.rag_pipeline", "message": "RagPipeline initialized successfully"}
+{"timestamp": "2026-05-22T20:26:17.975371+00:00", "level": "INFO", "module": "app.pipelines.ingestion_pipeline", "message": "[IngestionPipeline] Initialised"}
+{"timestamp": "2026-05-22T20:26:32.085671+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:26:32.253643+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "Initialising ChromaStore at 'data/chroma' with collection 'medical_research'."}
+{"timestamp": "2026-05-22T20:26:32.315794+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "ChromaStore ready — collection 'medical_research' contains 0 document(s)."}
+{"timestamp": "2026-05-22T20:26:32.316639+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Driver created — URI: bolt://neo4j:7687, user: neo4j"}
+{"timestamp": "2026-05-22T20:26:46.783529+00:00", "level": "INFO", "module": "app.reranker.reranker", "message": "[Reranker] CrossEncoder 'cross-encoder/ms-marco-MiniLM-L-6-v2' loaded successfully"}
+{"timestamp": "2026-05-22T20:26:46.785173+00:00", "level": "INFO", "module": "app.pipelines.rag_pipeline", "message": "RagPipeline initialized successfully"}
+{"timestamp": "2026-05-22T20:26:46.785503+00:00", "level": "INFO", "module": "app.pipelines.ingestion_pipeline", "message": "[IngestionPipeline] Initialised"}
+{"timestamp": "2026-05-22T20:26:46.797702+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant starting up..."}
+{"timestamp": "2026-05-22T20:26:46.797989+00:00", "level": "INFO", "module": "app.main", "message": "All pipeline components initialized"}
+{"timestamp": "2026-05-22T20:26:56.529492+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:26:56.531908+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.031s"}
+{"timestamp": "2026-05-22T20:27:02.832583+00:00", "level": "INFO", "module": "app.pipelines.rag_pipeline", "message": "[RagPipeline] Executing query: 'diabetes'"}
+{"timestamp": "2026-05-22T20:27:02.833837+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[RetrievalPipeline] Starting — query='diabetes', top_k_semantic=5, top_k_rerank=2"}
+{"timestamp": "2026-05-22T20:27:03.323715+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] Created 1 embeddings of dim 384"}
+{"timestamp": "2026-05-22T20:27:03.329051+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[SemanticRetriever] Retrieved 0 chunks in 0.495s"}
+{"timestamp": "2026-05-22T20:27:03.331210+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:27:11.196388+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[GraphRetriever] Retrieved 0 paths from Neo4j in 7.867s"}
+{"timestamp": "2026-05-22T20:27:11.199023+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[HybridRetriever] Done in 8.365s — vector_chunks=0, graph_paths=0"}
+{"timestamp": "2026-05-22T20:27:11.199664+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[Reranker] Done in 0.000s — kept 0/5 chunks after reranking"}
+{"timestamp": "2026-05-22T20:27:11.200187+00:00", "level": "INFO", "module": "app.retrieval.context_builder", "message": "[ContextBuilder] Built context with 0 evidence chunks and 0 graph relationships (442 chars)"}
+{"timestamp": "2026-05-22T20:27:11.200695+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[ContextBuilder] Built context: 442 chars"}
+{"timestamp": "2026-05-22T20:27:13.652225+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:27:16.123904+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:27:16.124793+00:00", "level": "WARNING", "module": "app.pipelines.rag_pipeline", "message": "[Self-Healing] High hallucination score. Triggering Adaptive Retrieval."}
+{"timestamp": "2026-05-22T20:27:16.128423+00:00", "level": "INFO", "module": "app.retrieval.adaptive_retriever", "message": "[AdaptiveRetrieval] Triggering adaptive strategies (Increased depth, expanded query)"}
+{"timestamp": "2026-05-22T20:27:18.189314+00:00", "level": "WARNING", "module": "app.retrieval.adaptive_retriever", "message": "[AdaptiveRetrieval] Query expansion failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:27:18.190261+00:00", "level": "ERROR", "module": "app.api.routes", "message": "Error executing query: RetrievalPipeline.execute() got an unexpected keyword argument 'graph_depth'"}
+{"timestamp": "2026-05-22T20:27:18.193827+00:00", "level": "INFO", "module": "app.main", "message": "POST /api/v1/query — 500 — 15.364s"}
+{"timestamp": "2026-05-22T20:27:26.631011+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:27:26.632648+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.011s"}
+{"timestamp": "2026-05-22T20:27:31.045412+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant shutting down..."}
+{"timestamp": "2026-05-22T20:27:42.173805+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:27:42.358354+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "Initialising ChromaStore at 'data/chroma' with collection 'medical_research'."}
+{"timestamp": "2026-05-22T20:27:42.420682+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "ChromaStore ready — collection 'medical_research' contains 0 document(s)."}
+{"timestamp": "2026-05-22T20:27:42.421488+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Driver created — URI: bolt://neo4j:7687, user: neo4j"}
+{"timestamp": "2026-05-22T20:27:54.140827+00:00", "level": "INFO", "module": "app.reranker.reranker", "message": "[Reranker] CrossEncoder 'cross-encoder/ms-marco-MiniLM-L-6-v2' loaded successfully"}
+{"timestamp": "2026-05-22T20:27:54.142333+00:00", "level": "INFO", "module": "app.pipelines.rag_pipeline", "message": "RagPipeline initialized successfully"}
+{"timestamp": "2026-05-22T20:27:54.142983+00:00", "level": "INFO", "module": "app.pipelines.ingestion_pipeline", "message": "[IngestionPipeline] Initialised"}
+{"timestamp": "2026-05-22T20:27:54.161098+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant starting up..."}
+{"timestamp": "2026-05-22T20:27:54.162324+00:00", "level": "INFO", "module": "app.main", "message": "All pipeline components initialized"}
+{"timestamp": "2026-05-22T20:27:54.265032+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant shutting down..."}
+{"timestamp": "2026-05-22T20:28:06.458929+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T20:28:06.620502+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "Initialising ChromaStore at 'data/chroma' with collection 'medical_research'."}
+{"timestamp": "2026-05-22T20:28:06.674748+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "ChromaStore ready — collection 'medical_research' contains 0 document(s)."}
+{"timestamp": "2026-05-22T20:28:06.675306+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Driver created — URI: bolt://neo4j:7687, user: neo4j"}
+{"timestamp": "2026-05-22T20:28:26.882598+00:00", "level": "INFO", "module": "app.reranker.reranker", "message": "[Reranker] CrossEncoder 'cross-encoder/ms-marco-MiniLM-L-6-v2' loaded successfully"}
+{"timestamp": "2026-05-22T20:28:26.883598+00:00", "level": "INFO", "module": "app.pipelines.rag_pipeline", "message": "RagPipeline initialized successfully"}
+{"timestamp": "2026-05-22T20:28:26.883998+00:00", "level": "INFO", "module": "app.pipelines.ingestion_pipeline", "message": "[IngestionPipeline] Initialised"}
+{"timestamp": "2026-05-22T20:28:26.897224+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant starting up..."}
+{"timestamp": "2026-05-22T20:28:26.897503+00:00", "level": "INFO", "module": "app.main", "message": "All pipeline components initialized"}
+{"timestamp": "2026-05-22T20:28:26.911021+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:28:26.911975+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.009s"}
+{"timestamp": "2026-05-22T20:28:36.760192+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:28:36.761459+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.007s"}
+{"timestamp": "2026-05-22T20:29:06.832783+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:29:06.834901+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.007s"}
+{"timestamp": "2026-05-22T20:29:15.805082+00:00", "level": "INFO", "module": "app.pipelines.rag_pipeline", "message": "[RagPipeline] Executing query: 'diabetes'"}
+{"timestamp": "2026-05-22T20:29:15.806140+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[RetrievalPipeline] Starting — query='diabetes', top_k_semantic=5, top_k_rerank=2, graph_depth=2"}
+{"timestamp": "2026-05-22T20:29:15.943924+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] Created 1 embeddings of dim 384"}
+{"timestamp": "2026-05-22T20:29:15.948130+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[SemanticRetriever] Retrieved 0 chunks in 0.140s"}
+{"timestamp": "2026-05-22T20:29:15.950104+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:29:19.626555+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[GraphRetriever] Retrieved 0 paths from Neo4j in 3.678s"}
+{"timestamp": "2026-05-22T20:29:19.627766+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[HybridRetriever] Done in 3.821s — vector_chunks=0, graph_paths=0"}
+{"timestamp": "2026-05-22T20:29:19.628481+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[Reranker] Done in 0.000s — kept 0/5 chunks after reranking"}
+{"timestamp": "2026-05-22T20:29:19.629198+00:00", "level": "INFO", "module": "app.retrieval.context_builder", "message": "[ContextBuilder] Built context with 0 evidence chunks and 0 graph relationships (442 chars)"}
+{"timestamp": "2026-05-22T20:29:19.629680+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[ContextBuilder] Built context: 442 chars"}
+{"timestamp": "2026-05-22T20:29:21.759990+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:29:24.286115+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:29:24.290072+00:00", "level": "WARNING", "module": "app.pipelines.rag_pipeline", "message": "[Self-Healing] High hallucination score. Triggering Adaptive Retrieval."}
+{"timestamp": "2026-05-22T20:29:24.290775+00:00", "level": "INFO", "module": "app.retrieval.adaptive_retriever", "message": "[AdaptiveRetrieval] Triggering adaptive strategies (Increased depth, expanded query)"}
+{"timestamp": "2026-05-22T20:29:26.713122+00:00", "level": "WARNING", "module": "app.retrieval.adaptive_retriever", "message": "[AdaptiveRetrieval] Query expansion failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:29:26.714201+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[RetrievalPipeline] Starting — query='diabetes', top_k_semantic=10, top_k_rerank=5, graph_depth=3"}
+{"timestamp": "2026-05-22T20:29:26.742300+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] Created 1 embeddings of dim 384"}
+{"timestamp": "2026-05-22T20:29:26.744550+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[SemanticRetriever] Retrieved 0 chunks in 0.030s"}
+{"timestamp": "2026-05-22T20:29:26.745516+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:29:31.818505+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[GraphRetriever] Retrieved 0 paths from Neo4j in 5.074s"}
+{"timestamp": "2026-05-22T20:29:31.821994+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[HybridRetriever] Done in 5.107s — vector_chunks=0, graph_paths=0"}
+{"timestamp": "2026-05-22T20:29:31.822803+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[Reranker] Done in 0.000s — kept 0/10 chunks after reranking"}
+{"timestamp": "2026-05-22T20:29:31.823399+00:00", "level": "INFO", "module": "app.retrieval.context_builder", "message": "[ContextBuilder] Built context with 0 evidence chunks and 0 graph relationships (442 chars)"}
+{"timestamp": "2026-05-22T20:29:31.823842+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[ContextBuilder] Built context: 442 chars"}
+{"timestamp": "2026-05-22T20:29:34.504285+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Regeneration failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:29:38.463342+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Re-Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:29:38.477358+00:00", "level": "INFO", "module": "app.main", "message": "POST /api/v1/query — 200 — 22.676s"}
+{"timestamp": "2026-05-22T20:29:38.491584+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:29:38.493279+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.013s"}
+{"timestamp": "2026-05-22T20:30:08.623449+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:30:08.628529+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.038s"}
+{"timestamp": "2026-05-22T20:30:38.723353+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:30:38.724959+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T20:31:08.841767+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:31:08.846350+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.025s"}
+{"timestamp": "2026-05-22T20:31:38.917636+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:31:38.919481+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T20:32:08.995170+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:32:08.998025+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.010s"}
+{"timestamp": "2026-05-22T20:32:39.062503+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:32:39.063892+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.005s"}
+{"timestamp": "2026-05-22T20:33:09.155245+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:33:09.159372+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.016s"}
+{"timestamp": "2026-05-22T20:33:39.235642+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:33:39.238642+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.009s"}
+{"timestamp": "2026-05-22T20:34:09.315500+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:34:09.317063+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.006s"}
+{"timestamp": "2026-05-22T20:34:39.404984+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:34:39.408865+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.016s"}
+{"timestamp": "2026-05-22T20:35:09.487426+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:35:09.488623+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T20:35:39.611194+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:35:39.615802+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.023s"}
+{"timestamp": "2026-05-22T20:36:09.705080+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:36:09.709064+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.018s"}
+{"timestamp": "2026-05-22T20:36:25.870084+00:00", "level": "INFO", "module": "app.main", "message": "OPTIONS /api/v1/query — 200 — 0.002s"}
+{"timestamp": "2026-05-22T20:36:25.889034+00:00", "level": "INFO", "module": "app.pipelines.rag_pipeline", "message": "[RagPipeline] Executing query: 'why dieabites occur'"}
+{"timestamp": "2026-05-22T20:36:25.892864+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[RetrievalPipeline] Starting — query='why dieabites occur', top_k_semantic=5, top_k_rerank=2, graph_depth=2"}
+{"timestamp": "2026-05-22T20:36:26.028823+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] Created 1 embeddings of dim 384"}
+{"timestamp": "2026-05-22T20:36:26.032040+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[SemanticRetriever] Retrieved 0 chunks in 0.136s"}
+{"timestamp": "2026-05-22T20:36:26.034027+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:36:28.380071+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[GraphRetriever] Retrieved 0 paths from Neo4j in 2.348s"}
+{"timestamp": "2026-05-22T20:36:28.382064+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[HybridRetriever] Done in 2.487s — vector_chunks=0, graph_paths=0"}
+{"timestamp": "2026-05-22T20:36:28.382587+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[Reranker] Done in 0.000s — kept 0/5 chunks after reranking"}
+{"timestamp": "2026-05-22T20:36:28.382980+00:00", "level": "INFO", "module": "app.retrieval.context_builder", "message": "[ContextBuilder] Built context with 0 evidence chunks and 0 graph relationships (442 chars)"}
+{"timestamp": "2026-05-22T20:36:28.383376+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[ContextBuilder] Built context: 442 chars"}
+{"timestamp": "2026-05-22T20:36:31.115798+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:36:33.791509+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:36:33.793882+00:00", "level": "WARNING", "module": "app.pipelines.rag_pipeline", "message": "[Self-Healing] High hallucination score. Triggering Adaptive Retrieval."}
+{"timestamp": "2026-05-22T20:36:33.796036+00:00", "level": "INFO", "module": "app.retrieval.adaptive_retriever", "message": "[AdaptiveRetrieval] Triggering adaptive strategies (Increased depth, expanded query)"}
+{"timestamp": "2026-05-22T20:36:36.558315+00:00", "level": "WARNING", "module": "app.retrieval.adaptive_retriever", "message": "[AdaptiveRetrieval] Query expansion failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:36:36.559260+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[RetrievalPipeline] Starting — query='why dieabites occur', top_k_semantic=10, top_k_rerank=5, graph_depth=3"}
+{"timestamp": "2026-05-22T20:36:36.581575+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] Created 1 embeddings of dim 384"}
+{"timestamp": "2026-05-22T20:36:36.583407+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[SemanticRetriever] Retrieved 0 chunks in 0.024s"}
+{"timestamp": "2026-05-22T20:36:36.584251+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:36:39.077360+00:00", "level": "INFO", "module": "app.retrieval.hybrid_retriever", "message": "[GraphRetriever] Retrieved 0 paths from Neo4j in 2.494s"}
+{"timestamp": "2026-05-22T20:36:39.077951+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[HybridRetriever] Done in 2.518s — vector_chunks=0, graph_paths=0"}
+{"timestamp": "2026-05-22T20:36:39.078296+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[Reranker] Done in 0.000s — kept 0/10 chunks after reranking"}
+{"timestamp": "2026-05-22T20:36:39.078718+00:00", "level": "INFO", "module": "app.retrieval.context_builder", "message": "[ContextBuilder] Built context with 0 evidence chunks and 0 graph relationships (442 chars)"}
+{"timestamp": "2026-05-22T20:36:39.079038+00:00", "level": "INFO", "module": "app.pipelines.retrieval_pipeline", "message": "[ContextBuilder] Built context: 442 chars"}
+{"timestamp": "2026-05-22T20:36:42.170416+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Regeneration failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:36:44.325142+00:00", "level": "ERROR", "module": "app.pipelines.rag_pipeline", "message": "Re-Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"}
+{"timestamp": "2026-05-22T20:36:44.329213+00:00", "level": "INFO", "module": "app.main", "message": "POST /api/v1/query — 200 — 18.454s"}
+{"timestamp": "2026-05-22T20:36:44.333909+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:36:44.334906+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T20:37:14.455733+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:37:14.460068+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.023s"}
+{"timestamp": "2026-05-22T20:37:44.587623+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:37:44.591767+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.018s"}
+{"timestamp": "2026-05-22T20:38:14.686951+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:38:14.690299+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.015s"}
+{"timestamp": "2026-05-22T20:38:44.775272+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:38:44.779100+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.016s"}
+{"timestamp": "2026-05-22T20:39:14.909108+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:39:14.913560+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.024s"}
+{"timestamp": "2026-05-22T20:39:44.990976+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:39:44.991977+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
+{"timestamp": "2026-05-22T20:40:15.089681+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:40:15.094520+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.019s"}
+{"timestamp": "2026-05-22T20:40:45.176316+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:40:45.180559+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.016s"}
+{"timestamp": "2026-05-22T20:41:15.266971+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Connectivity verified."}
+{"timestamp": "2026-05-22T20:41:15.267966+00:00", "level": "INFO", "module": "app.main", "message": "GET /api/v1/health — 200 — 0.004s"}
