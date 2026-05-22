@@ -1,0 +1,13 @@
+{"timestamp": "2026-05-22T18:44:01.125540+00:00", "level": "INFO", "module": "app.embeddings.embedder", "message": "[Embedder] SentenceTransformer 'all-MiniLM-L6-v2' loaded"}
+{"timestamp": "2026-05-22T18:44:01.803798+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "Initialising ChromaStore at 'data/chroma' with collection 'medical_research'."}
+{"timestamp": "2026-05-22T18:44:01.971342+00:00", "level": "INFO", "module": "app.vectordb.chroma_store", "message": "ChromaStore ready — collection 'medical_research' contains 0 document(s)."}
+{"timestamp": "2026-05-22T18:44:01.972039+00:00", "level": "INFO", "module": "app.graph.neo4j_store", "message": "[Neo4jStore] Driver created — URI: bolt://localhost:7687, user: neo4j"}
+{"timestamp": "2026-05-22T18:44:01.985623+00:00", "level": "INFO", "module": "app.feedback.feedback_store", "message": "[FeedbackStore] _migrate_schema: migrating user_rating from INTEGER to TEXT."}
+{"timestamp": "2026-05-22T18:44:01.987476+00:00", "level": "INFO", "module": "app.feedback.feedback_store", "message": "[FeedbackStore] _migrate_schema: migration completed successfully."}
+{"timestamp": "2026-05-22T18:44:01.987554+00:00", "level": "INFO", "module": "app.feedback.feedback_store", "message": "[FeedbackStore] Initialised at data/feedback.db"}
+{"timestamp": "2026-05-22T18:44:01.987628+00:00", "level": "ERROR", "module": "app.api.routes", "message": "Failed to initialize RagPipeline: RagPipeline.__init__() missing 3 required positional arguments: 'store', 'neo4j_store', and 'extractor'"}
+{"timestamp": "2026-05-22T18:44:01.987700+00:00", "level": "INFO", "module": "app.pipelines.ingestion_pipeline", "message": "[IngestionPipeline] Initialised"}
+{"timestamp": "2026-05-22T18:44:02.059796+00:00", "level": "INFO", "module": "app.main", "message": "GraphRAG Medical Research Assistant starting up..."}
+{"timestamp": "2026-05-22T18:44:02.060016+00:00", "level": "INFO", "module": "app.main", "message": "All pipeline components initialized"}
+{"timestamp": "2026-05-22T18:44:04.946334+00:00", "level": "INFO", "module": "app.main", "message": "GET /docs — 200 — 0.001s"}
+{"timestamp": "2026-05-22T18:44:05.234951+00:00", "level": "INFO", "module": "app.main", "message": "GET /openapi.json — 200 — 0.024s"}

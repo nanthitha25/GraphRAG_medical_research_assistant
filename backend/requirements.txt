@@ -1,0 +1,38 @@
+# ============================================================
+# GraphRAG Medical Research Assistant – Python Dependencies
+# ============================================================
+
+# Web framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+
+# Configuration & environment
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# LLM / OpenAI
+openai>=1.0.0
+tiktoken>=0.6.0
+
+# Vector store
+chromadb>=0.4.0
+
+# Embeddings
+sentence-transformers>=2.7.0
+
+# Graph database
+neo4j>=5.0.0
+
+# PDF ingestion
+pypdf>=4.0.0
+
+# Text splitting
+langchain-text-splitters>=0.2.0
+
+# HTTP client (async)
+httpx>=0.27.0
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
