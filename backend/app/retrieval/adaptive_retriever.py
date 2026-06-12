@@ -24,7 +24,7 @@ def expand_query(query: str) -> str:
     """
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gemini-3.5-flash",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3
         )

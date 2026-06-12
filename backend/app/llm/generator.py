@@ -14,7 +14,7 @@ def generate_answer(query, context):
     """
 
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gemini-3.5-flash",
         messages=[
             {
                 "role": "user",

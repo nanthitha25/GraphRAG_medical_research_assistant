@@ -7,7 +7,10 @@ class EntityExtractor:
         # Initialize OpenAI client if key is available in environment
         self.api_key = os.environ.get("OPENAI_API_KEY")
         if self.api_key:
-            self.client = OpenAI(api_key=self.api_key)
+            self.client = OpenAI(
+                api_key=self.api_key,
+                base_url=os.environ.get("OPENAI_BASE_URL")
+            )
         else:
             self.client = None
             print("WARNING: OPENAI_API_KEY not found in environment. EntityExtractor will use mock responses.")
@@ -37,7 +40,7 @@ class EntityExtractor:
 
         try:
             response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="gemini-3.5-flash",
                 messages=[
                     {"role": "system", "content": "You are a medical natural language processing AI. Output only valid JSON."},
                     {"role": "user", "content": prompt}
