@@ -43,3 +43,8 @@ build/
 
 # Mac
 .DS_Store
+
+# Logs
+*.log
+backend/logs/
+logs/
